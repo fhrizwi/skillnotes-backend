@@ -5,9 +5,14 @@
 	"scripts": {
 		"deploy": "wrangler deploy",
 		"dev": "wrangler dev",
-		"start": "wrangler dev"
+		"start": "wrangler dev",
+		"setup-db": "wrangler d1 execute skillnotesdb --file=./schema.sql && wrangler d1 execute skillnotesdb --file=./insert-data.sql",
+		"setup-db-schema": "wrangler d1 execute skillnotesdb --file=./schema.sql",
+		"setup-db-data": "wrangler d1 execute skillnotesdb --file=./insert-data.sql",
+		"test-db": "wrangler d1 execute skillnotesdb --command=\"SELECT COUNT(*) as total_records FROM skillnotes;\""
 	},
 	"devDependencies": {
 		"wrangler": "^4.37.1"
-	}
+	},
+	"dependencies": {}
 }

@@ -1,8 +1,14 @@
-name = "skillnotes"
+name = "api-skillnotes"
 main = "src/worker.js"
 workers_dev = true
 preview_urls = false
 compatibility_date = "2025-09-16"
+compatibility_flags = ["nodejs_compat"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "skillnotesdb"
+database_id = "b5a63d4d-5aae-4dbe-9bc2-0b47dd547c9b"
 
 [observability]
 enabled = true
